@@ -8,4 +8,10 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def destroy
+    current_user = User.find(params[:id])
+    current_user.destroy
+
+    redirect_to root
+  end
 end
