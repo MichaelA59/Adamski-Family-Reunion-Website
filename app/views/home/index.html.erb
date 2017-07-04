@@ -1,0 +1,9 @@
+<h1>Hi there you duck mucker </h1>
+
+<% if current_user.present? %>
+  Welcome <%= current_user.name %>!
+  <img src="<%= current_user.image %>">
+<% else %>
+  <%= link_to 'Signin', new_user_session_path %>
+  <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>
+<% end %>
