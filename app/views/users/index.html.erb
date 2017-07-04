@@ -1,9 +1,6 @@
 <h1> List of al Users </h1>
 
-<% @users.each do |user| %>
-  <% name = "#{user.first_name} #{user.last_name}" %>
-  <%= link_to name, user_path(user) %>
-  <% if user === current_user %>
-    (this is you!)
-  <% end %>
+<% users.each do |user| %>
+  <%= user.name %>
+  <%= user.image %>
 <% end %>
