@@ -1,0 +1,47 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Open Sans", sans-serif;
+  vertical-align: middle;
+  color: $color-body-text;
+}
+
+h1 {
+  font-family: 'Tangerine';
+}
+
+p {
+  font-family: 'Lato';
+}
+
+a {
+  color: #B6A19E;
+}
+
+footer {
+  background:#212121;
+  padding: 50px;
+  color: $white;
+  .footer-links {
+    list-style: none;
+    margin-top:30px;
+    li {
+      float: right;
+      margin-right: 15px;
+    }
+  }
+  .nav-logo {
+    font-family: Lobster;
+    font-size: 2.5em;
+    vertical-align: center;
+    background-color: transparent;
+    a {
+      color: #FBA100;
+    }
+  }
+}

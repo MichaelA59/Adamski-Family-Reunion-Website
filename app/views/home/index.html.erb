@@ -1,10 +1,4 @@
-<h1>Hi there you relative, you </h1>
-
-<% if current_user.present? %>
-  Welcome <%= current_user.name %>!
-  <img src="<%= current_user.image %>">
-  <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
-  <% else %>
-    <li><%= link_to 'Signin', new_user_session_path %></li>
-    <li><%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %></li>
-<% end %>
+<section class='landing-page'>
+  <div class='hero-image'>
+  </div>
+</section>
