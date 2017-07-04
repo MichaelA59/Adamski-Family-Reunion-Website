@@ -1,24 +1,16 @@
-# README
+# Adamski Family Reunion Website
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## STATUS - In Progress
 
-Things you may want to cover:
+* This is a site designed to host images taken from my family's reunion party.
+* It will feature a dual authentication (Devise & OAuth - Facebook)
+* Image hosting will be taken care of with AWS and CarrierWave
+* Backend will be Rails and PostgreSQL with the front-end being mostly Rails with an auto-refreshing React.js compoenent to * display top 10 most recently uploaded images.
 
-* Ruby version
+# Instructions 
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Clone
+* Run `bundle install`
+* Run `npm install`
+* Run `rails s` in your terminal and `npm start` in another tab from your terminal
+* Go to `localhost:3000`
