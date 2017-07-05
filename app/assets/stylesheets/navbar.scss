@@ -10,11 +10,13 @@
   width: 100%;
   ul {
     background: none;
+    margin-top: 6px;
   }
   .nav-logo {
     font-family: 'Tangerine';
-    color: black;
+    color: #B6A19E;
     font-size: 2.5em;
+    line-height: 6em;
     vertical-align: center;
     background-color: transparent;
   }
@@ -28,7 +30,7 @@
 }
 
 .hero-image {
-  height: 70vh;
+  height: 75vh;
   &::before {
     content: '';
     background-image: url('gradient.png');
