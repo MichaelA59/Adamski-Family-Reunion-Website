@@ -23,9 +23,22 @@
       text-align: center;
     }
     &-button {
-      padding: 5px;
-      border-radius: 5px;
-      border: 1px solid orange;
+      appearance: none;
+  		outline: 0;
+  		background-color: #FBA100;
+      border: 1px solid transparent;
+  		border: 0;
+  		padding: 10px 15px;
+  		color: white;
+  		border-radius: 3px;
+  		width: 150px;
+  		font-size: 18px;
+  		transition-duration: 0.5s;
+  		&:hover{
+  			background-color: white;
+        border: 1px solid black;
+        color: #FBA100;
+  		}
     }
   }
 }
