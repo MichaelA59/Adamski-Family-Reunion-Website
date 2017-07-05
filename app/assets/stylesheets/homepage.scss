@@ -18,6 +18,8 @@
       width: 100%;
       position: absolute;
       top: 0; right: 0; bottom: 0; left: 0;
+      -webkit-filter: blur(3px); /* Safari */
+      filter: blur(3px);
     }
     &__cta{
       position: absolute;
@@ -41,34 +43,34 @@
         align-items: center;
         align-content: center;
         flex-wrap: wrap;
-        margin: 0 auto;
+        margin: 50px auto 0px;
         padding: 10px;
         z-index: 10;
         text-align: center;
         .cta-button {
           color: #FBA100;
           display: block;
-          font-size:2.5em;
+          font-size:3.5em;
           font-weight: bold;
           line-height: 45px;
           margin: 0 auto;
-          max-width: 450px;
+          max-width: 550px;
           vertical-align: middle;
           width: 100%;
           letter-spacing: 0;
           text-shadow: 1px 1px black;
           &:hover,
           &:active {
-            letter-spacing: 7px;
+            letter-spacing: 5px;
           }
           &:after,
           &:before {
             backface-visibility: hidden;
             border: 1px solid rgba(#fff, 0);
-            bottom: 0px;
+            top: 10px;
             content: " ";
             display: block;
-            margin: 0 auto;
+            margin: 10px auto;
             position: relative;
             transition: all 280ms ease-in-out;
             width: 0;
@@ -76,14 +78,14 @@
           &:hover:after,
           &:hover:before {
             backface-visibility: hidden;
-            border-color: #fff;
+            border-color: rgba(255,255,255,.65);
             transition: width 350ms ease-in-out;
-            width: 70%;
+            width: 75%;
           }
           &:hover:before {
-            bottom: auto;
+            bottom: 10px;
             top: 0;
-            width: 70%;
+            width: 75%;
           }
         }
       }
