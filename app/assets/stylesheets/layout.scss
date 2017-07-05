@@ -6,12 +6,12 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Lato", sans-serif;
   vertical-align: middle;
   color: $color-body-text;
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Tangerine';
 }
 
@@ -36,8 +36,8 @@ footer {
     }
   }
   .nav-logo {
-    font-family: Lobster;
-    font-size: 2.5em;
+    font-family: 'Tangerine';
+    font-size: 1.5em;
     vertical-align: center;
     background-color: transparent;
     a {

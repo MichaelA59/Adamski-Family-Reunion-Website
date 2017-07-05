@@ -1,0 +1,94 @@
+* {
+  transition-property: all;
+  transition-duration: .6s;
+  transition-timing-function: ease;
+}
+
+.landing-page {
+  position: relative;
+  .hero-splash {
+    height: 75vh;
+    &::before {
+      content: '';
+      background-image: url('gradient.png');
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      -webkit-filter: blur(3px); /* Safari */
+      filter: blur(3px);
+    }
+    &__cta{
+      position: absolute;
+      height: 60%;
+      width: 60%;
+      left: 20%;
+      right: 20%;
+      top: 20%;
+      bottom: 20%;
+      &-text {
+        text-align: center;
+        font-family: "Lato";
+        font-weight: bold;
+        font-size: 3em;
+        color: white;
+        text-shadow: 1px 1px black;
+      }
+      &-signup-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        margin: 50px auto 0px;
+        padding: 10px;
+        z-index: 10;
+        text-align: center;
+        .cta-button {
+          color: #FBA100;
+          display: block;
+          font-size:3.5em;
+          font-weight: bold;
+          line-height: 45px;
+          margin: 0 auto;
+          max-width: 550px;
+          vertical-align: middle;
+          width: 100%;
+          letter-spacing: 0;
+          text-shadow: 1px 1px black;
+          &:hover,
+          &:active {
+            letter-spacing: 5px;
+          }
+          &:after,
+          &:before {
+            backface-visibility: hidden;
+            border: 1px solid rgba(#fff, 0);
+            top: 10px;
+            content: " ";
+            display: block;
+            margin: 10px auto;
+            position: relative;
+            transition: all 280ms ease-in-out;
+            width: 0;
+          }
+          &:hover:after,
+          &:hover:before {
+            backface-visibility: hidden;
+            border-color: rgba(255,255,255,.65);
+            transition: width 350ms ease-in-out;
+            width: 75%;
+          }
+          &:hover:before {
+            bottom: 10px;
+            top: 0;
+            width: 75%;
+          }
+        }
+      }
+    }
+  }
+}

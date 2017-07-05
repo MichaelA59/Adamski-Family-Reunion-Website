@@ -1,17 +1,22 @@
 @import "variables";
 
+.landing-page {
+  position: relative;
+}
+
 .top-bar {
   height: 6em;
   background-color: transparent;
-
   ul {
-    background: none;
+    background: transparent;
+    margin-top: 6px;
   }
-
   .nav-logo {
     font-family: 'Tangerine';
-    color: black;
+    color: #B6A19E;
     font-size: 2.5em;
+    font-weight: bold;
+    line-height: 6em;
     vertical-align: center;
     background-color: transparent;
   }
@@ -19,26 +24,7 @@
     padding: 1em;
     background-color: transparent;
     .menu {
-      text-align: right;
+      text-align: -webkit-right;
     }
-  }
-}
-
-.landing-page {
-  position: relative;
-}
-
-.hero-image {
-  height: 70vh;
-  &::before {
-    content: '';
-    background-image: url('gradient.png');
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
   }
 }
