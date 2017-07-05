@@ -1,0 +1,100 @@
+.landing-page {
+  position: relative;
+  .hero-splash {
+    height: 75vh;
+    &::before {
+      content: '';
+      background-image: url('gradient.png');
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+    }
+    &__cta{
+      position: absolute;
+      height: 60%;
+      width: 60%;
+      left: 20%;
+      right: 20%;
+      top: 20%;
+      bottom: 20%;
+      &-text {
+        text-align: center;
+        font-family: "Lato";
+        font-weight: bold;
+        font-size: 3em;
+        color: white;
+        text-shadow: 1px 1px black;
+      }
+      &-signup-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        padding: 10px;
+        z-index: 10;
+        &__button-container {
+          height:100%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          .btn {
+            margin-top: calc(75% + 25px);
+            position: relative;
+            display: inline-block;
+            width: 277px;
+            height: 50px;
+            font-size: 1em;
+            font-weight: bold;
+            line-height: 60px;
+            text-align: center;
+            background-color: transparent;
+            cursor: pointer;
+            text-decoration:none;
+            font-family: 'Lato';
+            font-weight:900;
+            font-size:17px;
+            letter-spacing: 0.045em;
+          }
+
+          .btn svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          .btn svg rect {
+            stroke-width: 2;
+            stroke-dasharray: 353, 0;
+            stroke-dashoffset: 0;
+            -webkit-transition: all 600ms ease;
+            transition: all 600ms ease;
+          }
+
+          .btn span{
+            background: rgb(255,130,130);
+            background: -moz-linear-gradient(left,  rgba(255,130,130,1) 0%, rgba(225,120,237,1) 100%);
+            background: -webkit-linear-gradient(left,  rgba(255,130,130,1) 0%,rgba(225,120,237,1) 100%);
+            background: linear-gradient(to right,  rgba(255,130,130,1) 0%,rgba(225,120,237,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8282', endColorstr='#e178ed',GradientType=1 );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+
+          .btn:hover svg rect {
+            stroke-width: 4;
+            stroke-dasharray: 196, 543;
+            stroke-dashoffset: 437;
+          }
+        }
+      }
+    }
+  }
+}
