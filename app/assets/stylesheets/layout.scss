@@ -24,6 +24,9 @@ a {
 }
 
 footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
   .row{
     background:#212121;
     max-width: 100%;
