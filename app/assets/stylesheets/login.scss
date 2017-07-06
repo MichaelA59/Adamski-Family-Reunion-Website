@@ -17,6 +17,9 @@
     @media(max-width: 480px) {
       width: 85%;
     }
+    &:hover {
+  	  box-shadow: 1px 2px 20px rgb(85,85,85);
+    }
   }
   &--submit {
     &-container {
@@ -41,29 +44,61 @@
   		}
     }
   }
+  &--facebook-btn {
+    background-position: 25px 0px;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: inline-block;
+    height: 50px;
+	  line-height: 50px;
+    text-align: left;
+    text-decoration: none;
+    text-transform: uppercase;
+    vertical-align: middle;
+    width: 100%;
+	  border-radius: 3px;
+    margin: 10px auto;
+    outline: rgb(255, 255, 255) none 0px;
+    padding-left: 20%;
+    transition: all 0.2s cubic-bezier(0.72, 0.01, 0.56, 1) 0s;
+	  -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    background: rgb(255, 255, 255) url('https://eswarasai.com/projects/social-login/img/facebook.svg') no-repeat scroll 5px 0px / 30px 50px padding-box border-box;
+    border: 1px solid rgb(60, 90, 154);
+    span {
+      box-sizing: border-box;
+      color: rgb(60, 90, 154);
+      cursor: pointer;
+      text-align: center;
+      text-transform: uppercase;
+      border: 0px none rgb(255, 255, 255);
+      outline: rgb(255, 255, 255) none 0px;
+      -webkit-transition: all .3s ease;
+      -moz-transition: all .3s ease;
+      -ms-transition: all .3s ease;
+      -o-transition: all .3s ease;
+      transition: all .3s ease;
+    }
+    &:hover {
+      border-color: rgb(60, 90, 154);
+      background: rgb(60, 90, 154) url('https://eswarasai.com/projects/social-login/img/facebook-white.svg') no-repeat scroll 5px 0px / 30px 50px padding-box border-box;
+      -webkit-transition: all .8s ease-out;
+      -moz-transition: all .3s ease;
+      -ms-transition: all .3s ease;
+      -o-transition: all .3s ease;
+      transition: all .3s ease-out;
+      span {
+        color: #FFF;
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease;
+      }
+    }
+  }
 }
-//
-// input {
-//   display: block;
-// 	appearance: none;
-// 	outline: 0;
-// 	border: 1px solid fade(white, 40%);
-// 	background-color: fade(white, 20%);
-// 	width: 250px;
-// 	border-radius: 3px;
-// 	padding: 10px 15px;
-// 	margin: 0 auto 10px auto;
-// 	display: block;
-// 	text-align: center;
-// 	font-size: 18px;
-// 	color: white;
-// 	transition-duration: 0.25s;
-// 	font-weight: 300;
-// 	&:hover{
-// 		background-color: fade(white, 40%);
-// 	}
-// 	&:focus{
-// 		background-color: white;
-// 		color: #53e3a6;
-// 	}
-// }
