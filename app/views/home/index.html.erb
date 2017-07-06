@@ -12,15 +12,30 @@
           </div>
         </div>
       </div>
-      <!-- SIGNUP BUTTON CONTAINER -->
-      <div class='row hero-splash__cta-signup-container'>
-        <!-- 2nd BUTTON CONTAINER -->
+      <% if !user_signed_in? %>
+      <!-- Signup Button Container -->
+      <div class='row hero-splash__cta-button-container'>
+        <!-- Signup Button -->
         <div class='columns small-12 small-centered'>
           <a href='http://localhost:3000/users/sign_in' class='cta-button'>
             Let's Get Started
           </a>
         </div>
       </div>
+      <% else %>
+        <div class='row hero-splash__cta-button-container'>
+          <div class='columns small-12 medium-6 small-centered'>
+            <a href='http:localhost:3000/images' class='cta-button'>
+              View
+            </a>
+          </div>
+          <div class='columns small-12 medium-6 small-centered'>
+            <a href='http:localhost:3000/upload' class='cta-button'>
+              Upload
+            </a>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
 </section>
