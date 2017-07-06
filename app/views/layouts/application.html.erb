@@ -24,8 +24,10 @@
       <div class="columns small-12 medium-6 right-nav">
         <ul class="menu">
           <!-- Conditional for user signed in or not -->
-          <li class="notice"><%= notice %></li>
-          <li class="alert"><%= alert %></li>
+
+          <!-- <li class="notice"><%= notice %></li>
+          <li class="alert"><%= alert %></li> -->
+
           <% if user_signed_in? %>
             <li class='right-links'><%= link_to current_user.name.capitalize, user_path(current_user)%></li>
             <li class='right-links'><%= link_to "Sign Out", destroy_user_session_path, method: :delete%></li>
