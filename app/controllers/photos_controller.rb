@@ -1,8 +1,9 @@
-class PhotoController < ApplicationController
+class PhotosController < ApplicationController
 
   def index
     @user = current_user
-    @photos = Photo.all.order('created_at DESC')
+    @users = User.all
+    @photos = Photo.all
   end
 
   def show
@@ -12,15 +13,28 @@ class PhotoController < ApplicationController
 
   def new
     @photo = Photo.new
+    @user = current_user
   end
 
   def create
     @user = current_user
+    user_id = @user.id
     @photo = Photo.new(photo_params)
+    @photo.user_id = @user.id
     if @photo.save
       redirect_to @user
     else
       render :new
+    end
+  end
+
+  def update
+    @user = current_user
+    @photo = Photo.find(params[:id])
+    if @photo.update(photo_params)
+      redirect_to @user
+    else
+      render :edit
     end
   end
 
@@ -33,7 +47,7 @@ class PhotoController < ApplicationController
 
   private
 
-  def photos_params
-    params.require(:photo).permit(:photo)
+  def photo_params
+    params.require(:photo).permit(:photo, :user_id)
   end
 end

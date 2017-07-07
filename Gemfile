@@ -10,6 +10,7 @@ gem 'devise'
 gem 'omniauth-facebook'
 gem 'foundation-rails'
 gem "carrierwave"
+gem 'mini_magick'
 
 group :development do
   gem 'listen', '~> 3.0.5'

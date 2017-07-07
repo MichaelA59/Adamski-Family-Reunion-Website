@@ -1,2 +1,6 @@
-<% name = @user %>
-<h1> <%= "#{name}'s Profile" %>
+<h1> All photos </h1>
+
+
+<% @photos.each do |image| %>
+   <%= image_tag "#{image.photo}" %>
+ <% end %>
