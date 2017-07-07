@@ -4,21 +4,23 @@
   display:flex;
   align-items:center;
   justify-content:center;
+  background-image: linear-gradient(to bottom, #fff 15%, rgba(226,76,12,.57) 56%);
+  position: relative;
   .file-upload{
-    height:200px;
-    width:200px;
-    border-radius: 100px;
-    position:relative;
-    display:flex;
-    justify-content:center;
+    height: 300px;
+    width: 300px;
+    border-radius: 160px;
+    position: relative;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    border:4px solid #FFFFFF;
-    overflow:hidden;
-    background-image: linear-gradient(to bottom, #2590EB 50%, #FFFFFF 50%);
+    border: 5px solid #c5c5c5;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, #FBA100 5%, #6C648B 36%);
     background-size: 100% 200%;
     transition: all 1s;
     color: #FFFFFF;
-    font-size:100px;
+    font-size: 150px;
     input[type='file']{
       height:200px;
       width:200px;
@@ -31,6 +33,58 @@
     &:hover{
       background-position: 0 -100%;
       color:#2590EB;
+    }
+  }
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    margin: 50px auto 0px;
+    padding: 10px;
+    z-index: 10;
+    text-align: center;
+    .button {
+      color: #FBA100;
+      display: block;
+      font-size:3.5em;
+      font-weight: bold;
+      line-height: 45px;
+      margin: 0 auto;
+      max-width: 550px;
+      vertical-align: middle;
+      width: 100%;
+      letter-spacing: 0;
+      text-shadow: 1px 1px black;
+      &:hover,
+      &:active {
+        letter-spacing: 5px;
+      }
+      &:after,
+      &:before {
+        backface-visibility: hidden;
+        border: 1px solid rgba(#fff, 0);
+        top: 10px;
+        content: " ";
+        display: block;
+        margin: 10px auto;
+        position: relative;
+        transition: all 280ms ease-in-out;
+        width: 0;
+      }
+      &:hover:after,
+      &:hover:before {
+        backface-visibility: hidden;
+        border-color: rgba(255,255,255,.65);
+        transition: width 350ms ease-in-out;
+        width: 75%;
+      }
+      &:hover:before {
+        bottom: 10px;
+        top: 0;
+        width: 75%;
+      }
     }
   }
 }
