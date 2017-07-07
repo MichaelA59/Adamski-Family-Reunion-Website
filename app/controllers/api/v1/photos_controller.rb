@@ -3,7 +3,7 @@ class Api::V1::PhotosController < ApplicationController
 
   def index
     scaled_images = []
-    @photos = Photo.all
+    @photos = Photo.all.order('created_at DESC').limit(10)
     @photos.each do |photo|
       scaled_images << photo.photo.versions[:medium].url
     end
