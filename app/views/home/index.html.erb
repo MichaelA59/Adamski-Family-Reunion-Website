@@ -30,9 +30,7 @@
             </a>
           </div>
           <div class='columns small-12 medium-6 small-centered'>
-            <a href='http:localhost:3000/upload' class='cta-button'>
-              Upload
-            </a>
+            <%= link_to 'Upload', new_photo_path, html_options = {class: 'cta-button'} %>
           </div>
         </div>
       <% end %>
