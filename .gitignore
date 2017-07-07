@@ -18,3 +18,7 @@
 
 /node_modules
 /app/assets/javascripts/bundle.js
+
+
+# Ignore uploaded files in test/development
+/public/uploads
