@@ -1,6 +1,18 @@
 <h1> All photos </h1>
 
-
-<% @photos.each do |image| %>
-   <%= image_tag "#{image}" %>
- <% end %>
+<% if !@photos.nil? %>
+  <div class='row small-up-1 medium-up-2 large-up-3'>
+    <% @photos.each do |image| %>
+      <div class='column column-block'>
+        <div class='user-upload'>
+          <div class='user-upload--img-wrapper'>
+            <!-- <%= image_tag "#{image.photo}" %> -->
+            <%= link_to image_tag("#{image.photo}"), photo_path(image.id) %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <% else %>
+    <p> No Photos yet, check back soon though! </p>
+<% end %>
