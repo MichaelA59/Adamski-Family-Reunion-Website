@@ -11,6 +11,7 @@ gem 'omniauth-facebook'
 gem 'foundation-rails'
 gem "carrierwave"
 gem 'mini_magick'
+gem 'fog'
 
 group :development do
   gem 'listen', '~> 3.0.5'

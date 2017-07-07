@@ -18,8 +18,7 @@
       <div class='column column-block'>
         <div class='user-upload'>
           <div class='user-upload--img-wrapper'>
-            <!-- <%= image_tag "#{image.photo}" %> -->
-            <%= link_to image_tag("#{image.photo}"), photo_path(image.id) %>
+            <%= link_to image_tag(image.photo.versions[:medium].to_s), photo_path(image.id) %>
           </div>
         </div>
       </div>
