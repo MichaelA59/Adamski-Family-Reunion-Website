@@ -64,11 +64,11 @@ class UsersContainer extends Component {
     })
 
     return (
-      <div>
-        <div className='user-index--title-card'>
+      <div className='user-list'>
+        <div className='user-list__all-users'>
           {users}
         </div>
-        <div className='user-index--details-card'>
+        <div className='user-list__active-user'>
           <UserDetails
             key={this.state.selectedUserInfo.id}
             id={this.state.selectedUserInfo.id}
