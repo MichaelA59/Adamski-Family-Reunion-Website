@@ -18,7 +18,7 @@
 
     <div class="form--signup__field--email">
       <%= f.label :email %><br />
-      <%= f.password_field :email, autocomplete: "off" %>
+      <%= f.email_field :email, autocomplete: "off" %>
     </div>
 
     <div class="form--signup__field">
@@ -44,11 +44,7 @@
       <%= f.submit "Sign Up", class: 'form--signup__submit-button' %>
     </div>
 
-    <div class='row'>
-      <div class='columns text-center'>
-        -- or --
-      </div>
-    </div>
+    <br/>
 
     <div class='row'>
       <div class='columns small-12 small-centered text-center'>
