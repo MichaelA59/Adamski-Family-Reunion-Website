@@ -8,7 +8,7 @@ class User extends Component {
 
   render() {
     return (
-      <div>
+      <div onClick={this.props.handleUserSelect}>
         <img src={this.props.avatar} />
         <h1> {this.props.name} </h1>
       </div>
