@@ -40,7 +40,11 @@
 
 <section>
   <!-- React component displaying most recent uploaded images -->
-  <h1 class='text-center'> Most Recent Uploads </h1>
+  <% if @photos.size > 0 %>
+    <h1 class='text-center'> Most Recent Uploads </h1>
+  <% else %>
+    <h1 class='text-center'> Be the first to upload a photo! </h1>
+  <% end %>
   <div class='bumper-25'></div>
   <div id='app'></div>
 </section>
