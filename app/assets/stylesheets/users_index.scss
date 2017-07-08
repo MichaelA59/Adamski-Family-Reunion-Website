@@ -52,6 +52,9 @@
       border: 1px solid #c5c5c5;
       border-radius: 3px;
       box-shadow: 0px 0px 25px #cbcbcb;
+        img {
+          border-radius: 100%;
+        }
       a:-webkit-any-link {
         color: -webkit-link;
         cursor: auto;
