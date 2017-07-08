@@ -3,6 +3,7 @@ class PhotoUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   include CarrierWave::MiniMagick
+  process :auto_orient
 
   # Choose what kind of storage to use for this uploader:
   storage :file
@@ -21,6 +22,13 @@ class PhotoUploader < CarrierWave::Uploader::Base
   #
   #   "/images/fallback/" + [version_name, "default.png"].compact.join('_')
   # end
+
+  def auto_orient
+    manipulate! do |img|
+      img.auto_orient
+      img
+    end
+ end
 
   # Process files as they are uploaded:
   process resize_to_fill: [800, 800]

@@ -24,12 +24,15 @@ class UsersContainer extends Component {
 
   handleUserSelect(id) {
       let newId = id
-      let userInfo = this.state.users[newId - 1]
-      debugger
-      this.setState({
-        selectedUserId: newId,
-        selectedUserInfo: userInfo
-      })
+      let i = 0;
+      for(i = 0; i < this.state.users.length; i++) {
+        if (this.state.users[i].id === newId) {
+          this.setState({
+            selectedUserId: newId,
+            selectedUserInfo: this.state.users[i]
+          })
+        }
+      }
     }
 
   componentWillMount() {
@@ -61,11 +64,11 @@ class UsersContainer extends Component {
     })
 
     return (
-      <div>
-        <div className='user-index--title-card'>
+      <div className='user-list'>
+        <div className='user-list__all-users'>
           {users}
         </div>
-        <div className='user-index--details-card'>
+        <div className='user-list__active-user'>
           <UserDetails
             key={this.state.selectedUserInfo.id}
             id={this.state.selectedUserInfo.id}
