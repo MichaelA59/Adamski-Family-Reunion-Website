@@ -9,8 +9,8 @@ class Photo extends Component {
 
   render() {
     return (
-      <div>
-        <img src={this.props.photo} />
+      <div className='recent-uploads--wrapper'>
+        <img className='recent-uploads--img'src={this.props.photo} />
       </div>
     )
   }

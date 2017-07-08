@@ -1,3 +1,7 @@
 class HomeController < ApplicationController
-  def index; end
+
+  def index
+    @photos = Photo.all.order('created_at DESC').limit(10)
+  end
+
 end
