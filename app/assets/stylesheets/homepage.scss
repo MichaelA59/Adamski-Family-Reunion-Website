@@ -106,6 +106,7 @@
     display: flex;
   }
   &--wrapper {
+    box-shadow: 0px 2px 50px rgba(0,0,0,.6);
     -webkit-box-flex: auto;
     -ms-flex: auto;
     flex: auto;
