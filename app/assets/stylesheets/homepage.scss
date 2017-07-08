@@ -1,6 +1,6 @@
 * {
   transition-property: all;
-  transition-duration: .6s;
+  transition-duration: .4s;
   transition-timing-function: ease;
 }
 
@@ -90,5 +90,35 @@
         }
       }
     }
+  }
+}
+
+.recent-uploads {
+  &--container {
+    padding: .5vw;
+    font-size: 0;
+    display: -ms-flexbox;
+    -ms-flex-wrap: wrap;
+    -ms-flex-direction: column;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    display: -webkit-box;
+    display: flex;
+  }
+  &--wrapper {
+    box-shadow: 0px 2px 50px rgba(0,0,0,.6);
+    -webkit-box-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
+    width: 200px;
+    margin: .5vw;
+  }
+  &--img {
+    width: 100%;
+    height: auto;
+  }
+    @media screen and (max-width: 400px) {
+    &--wrapper { margin: 0; }
+    &--container { padding: 0; }
   }
 }

@@ -8,7 +8,7 @@ body {
   height: 100%;
   font-family: "Lato", sans-serif;
   vertical-align: middle;
-  color: $color-body-text;
+  color: black;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -20,7 +20,10 @@ p {
 }
 
 a {
-  color: #B6A19E;
+  color: black;
+  &:hover {
+    color: grey;
+  }
 }
 
 footer {
