@@ -1,1 +1,49 @@
-<h1> Hi bitch </h1>
+<h2 class='text-center'>Profile Details</h2>
+
+<div class='bumper-25'></div>
+
+<section>
+  <%= form_for(@user, html: {class: 'form--signup__box'}) do |f| %>
+
+    <div class="form--signup__field">
+      <div class='left'>
+        <%= f.label :mother, 'Mother' %>
+        <%= f.collection_select :mother, @mother, :first, :last %>
+      </div>
+      <div class='right'>
+        <%= f.label :father, "Father" %>
+        <%= f.collection_select :father, @father, :first, :last %>
+      </div>
+    </div>
+
+    <div class="form--signup__field--email">
+      <%= f.label :city, "City" %>
+      <%= f.text_field :city %>
+    </div>
+
+    <div class="form--signup__field">
+      <%= f.label :state, "State" %>
+      <%= f.collection_select :state, @state, :first, :last %>
+    </div>
+
+    <div class="form--signup__field">
+      <%= f.label :address, "Address" %>
+      <%= f.text_field :address %>
+    </div>
+
+    <div class="form--signup__field">
+      <%= f.label :phone_number, "Phone Number" %>
+      <%= f.text_field :phone_number %>
+    </div>
+
+    <div class='bumper-25'></div>
+
+    <div class="form--signup__submit-container">
+      <%= f.submit "Save Profile", class: 'button' %>
+    </div>
+  <% end %>
+
+</section>
+
+<div class='bumper-50'></div>
+<div class='bumper-50'></div>
