@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Adamski Family Runion 2017" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
@@ -30,7 +30,11 @@
           <li class="alert"><%= alert %></li> -->
 
           <% if user_signed_in? %>
-            <li class='right-links'><%= link_to current_user.name.capitalize, user_path(current_user)%></li>
+            <% if current_user.name %>
+              <li class='right-links'><%= link_to current_user.name.split.map(&:capitalize).join(' '), user_path(current_user)%></li>
+            <% else %>
+              <li class='right-links'><%= link_to current_user.first_name + ' '+ current_user.last_name, user_path(current_user)%></li>
+            <% end %>
             <li class='right-links'><%= link_to "Sign Out", destroy_user_session_path, method: :delete%></li>
           <% else %>
             <li class='right-links'><%= link_to 'Log In', new_user_session_path %></li>

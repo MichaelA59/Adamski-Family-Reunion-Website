@@ -89,6 +89,17 @@
           }
         }
       }
+      &-view-more {
+        h3 {
+          color: white;
+        }
+        a {
+          width: 40px;
+          height: 40px;
+          background-image: url('arrow');
+          background-size: contain;
+        }
+      }
     }
   }
 }
