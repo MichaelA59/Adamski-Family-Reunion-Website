@@ -1,28 +1,65 @@
 @import "variables";
-
-.landing-page {
-  position: relative;
+//
+// .landing-page {
+//   position: relative;
+// }
+//
+// .top-bar {
+//   height: 6em;
+//   background-color: transparent;
+//   ul {
+//     background: transparent;
+//     margin-top: 6px;
+//   }
+//   .nav-logo {
+//     font-family: 'Bellefair';
+//     font-size: 2.5em;
+//     line-height: 6em;
+//     vertical-align: center;
+//     background-color: transparent;
+//   }
+//   .right-nav {
+//     padding: 1em;
+//     background-color: transparent;
+//     .menu {
+//       text-align: -webkit-right;
+//     }
+//   }
+// }
+.example5 .navbar-brand {
+  display: flex;
+  align-items: center;
+}
+.example5 .navbar-brand>img {
+  padding: 7px 14px;
 }
 
-.top-bar {
-  height: 6em;
-  background-color: transparent;
-  ul {
-    background: transparent;
-    margin-top: 6px;
-  }
-  .nav-logo {
-    font-family: 'Bellefair';
-    font-size: 2.5em;
-    line-height: 6em;
-    vertical-align: center;
-    background-color: transparent;
-  }
-  .right-nav {
-    padding: 1em;
-    background-color: transparent;
-    .menu {
-      text-align: -webkit-right;
-    }
-  }
+
+
+.navbar-alignit .navbar-header {
+	  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  height: 50px;
+}
+.navbar-alignit .navbar-brand {
+	top: 50%;
+	display: block;
+	position: relative;
+	height: auto;
+	transform: translate(0,-50%);
+	margin-right: 15px;
+  margin-left: 15px;
+}
+
+
+
+
+
+.navbar-nav>li>.dropdown-menu {
+	z-index: 9999;
+}
+
+body {
+  font-family: "Lato";
 }
