@@ -40,7 +40,7 @@
 
 
 
-    <div class="container-fullwidth .example5">
+    <div class="container-fullwidth example5">
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -50,14 +50,24 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="http://disputebills.com"><img style="	width: 64px;" src="https://res.cloudinary.com/disputebills/image/upload/v1462474206/blue-mark_cnzgry.png" alt="Dispute Bills">Brand Name
-          </a>
+          <%= link_to image_tag("adamski-crest", height: 75, width: 75), root_path, html_options = {class: 'navbar-brand'} %>
         </div>
         <div id="navbar5" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#">Directory</a></li>
+            <li><a href="#">View Photos</a></li>
+            <li><a href="#">Upload</a></li>
+            <% if user_signed_in? %>
+              <% if current_user.name %>
+                <li class='right-links'><%= link_to current_user.name.split.map(&:capitalize).join(' '), user_path(current_user)%></li>
+              <% else %>
+                <li class='right-links'><%= link_to current_user.first_name + ' '+ current_user.last_name, user_path(current_user)%></li>
+              <% end %>
+              <li class='right-links'><%= link_to "Sign Out", destroy_user_session_path, method: :delete%></li>
+            <% else %>
+              <li class='right-links'><%= link_to 'Log In', new_user_session_path %></li>
+              <li class='right-links'><%= link_to 'Sign Up', new_user_registration_path %></li>
+            <% end %>
           </ul>
         </div>
         <!--/.nav-collapse -->

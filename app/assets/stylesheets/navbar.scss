@@ -35,6 +35,9 @@
 }
 
 
+.navbar {
+  margin-bottom: 0px;
+}
 
 .navbar-alignit .navbar-header {
 	  -webkit-transform-style: preserve-3d;
@@ -53,13 +56,24 @@
 }
 
 
+.example5 {
+    min-height: 80px;
+}
 
+.navbar-nav > li > a {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    line-height: 80px;
+}
+
+@media (max-width: 767px) {
+    .navbar-nav > li > a {
+    line-height: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;}
+}
 
 
 .navbar-nav>li>.dropdown-menu {
 	z-index: 9999;
-}
-
-body {
-  font-family: "Lato";
 }
