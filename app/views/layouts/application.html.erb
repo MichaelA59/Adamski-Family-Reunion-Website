@@ -13,21 +13,15 @@
   </head>
 
   <body>
-    <!-- Nav Bar -->
-    <div class="top-bar" id='top-bar'>
-      <!-- Left Section of Nav Bar -->
+
+    <!-- <div class="top-bar" id='top-bar'>
       <div class="columns small-12 medium-6">
         <ul class="dropdown menu" data-dropdown-menu>
           <li class='nav-logo'><%= link_to "Adamski Family Reunion 2017", root_path %></li>
         </ul>
       </div>
-      <!-- Right Section of Nav Bar -->
       <div class="columns small-12 medium-6 right-nav">
         <ul class="menu">
-          <!-- Conditional for user signed in or not -->
-
-          <!-- <li class="notice"><%= notice %></li>
-          <li class="alert"><%= alert %></li> -->
 
           <% if user_signed_in? %>
             <% if current_user.name %>
@@ -42,7 +36,66 @@
           <% end %>
         </ul>
       </div>
-    </div>
+    </div> -->
+
+
+
+    <div class="container-fullwidth example5">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar5">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <%= link_to root_path, :class => "navbar-brand" do %>
+            <%= image_tag("adamski-crest", :alt => "Adamski Crest") %>
+            <span>Adamski Family Reunion</span>
+          <% end %>
+        </div>
+        <div id="navbar5" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://localhost:3000/users">Family Directory</a></li>
+            <li><a href="http://localhost:3000/photos">View Photos</a></li>
+            <li><a href="http://localhost:3000/photos/new">Upload</a></li>
+            <% if user_signed_in? %>
+              <% if current_user.name %>
+                <li class='right-links'><%= link_to current_user.name.split.map(&:capitalize).join(' '), user_path(current_user)%></li>
+              <% else %>
+                <li class='right-links'><%= link_to current_user.first_name + ' '+ current_user.last_name, user_path(current_user)%></li>
+              <% end %>
+              <li class='right-links'><%= link_to "Sign Out", destroy_user_session_path, method: :delete%></li>
+            <% else %>
+              <li class='right-links'><%= link_to 'Log In', new_user_session_path %></li>
+              <li class='right-links'><%= link_to 'Sign Up', new_user_registration_path %></li>
+            <% end %>
+          </ul>
+        </div>
+        <!--/.nav-collapse -->
+      </div>
+      <!--/.container-fluid -->
+    </nav>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <%= yield %>
 

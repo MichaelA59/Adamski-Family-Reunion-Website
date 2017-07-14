@@ -1,28 +1,53 @@
 @import "variables";
 
-.landing-page {
-  position: relative;
+.example5 .navbar-brand {
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+.example5 .navbar-brand>img {
+  padding: 7px 14px;
+  height: 50px;
+  width: 50px;
 }
 
-.top-bar {
-  height: 6em;
-  background-color: transparent;
-  ul {
-    background: transparent;
-    margin-top: 6px;
-  }
-  .nav-logo {
-    font-family: 'Bellefair';
-    font-size: 2.5em;
-    line-height: 6em;
-    vertical-align: center;
-    background-color: transparent;
-  }
-  .right-nav {
-    padding: 1em;
-    background-color: transparent;
-    .menu {
-      text-align: -webkit-right;
-    }
-  }
+.example5 {
+  min-height: 50px;
+}
+
+.navbar {
+  margin-bottom: 0px;
+}
+
+.navbar-alignit .navbar-header {
+	  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  height: 50px;
+}
+
+.navbar-alignit .navbar-brand {
+	top: 50%;
+	display: block;
+	position: relative;
+	transform: translate(0,-50%);
+	margin-right: 5px;
+  margin-left: 5px;
+}
+
+.navbar-nav > li > a {
+    font-size: 1.25em;
+    line-height: 80px;
+    font-weight: bold;
+}
+
+@media (max-width: 767px) {
+    .navbar-nav > li > a {
+    line-height: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;}
+}
+
+.navbar-nav>li>.dropdown-menu {
+	z-index: 9999;
 }
