@@ -50,13 +50,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <%= link_to image_tag("adamski-crest", height: 75, width: 75), root_path, html_options = {class: 'navbar-brand'} %>
+          <%= link_to root_path, :class => "navbar-brand" do %>
+            <%= image_tag("adamski-crest", :alt => "Adamski Crest") %>
+            <span>Adamski Family Reunion</span>
+          <% end %>
         </div>
         <div id="navbar5" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Directory</a></li>
-            <li><a href="#">View Photos</a></li>
-            <li><a href="#">Upload</a></li>
+            <li><a href="http://localhost:3000/users">Family Directory</a></li>
+            <li><a href="http://localhost:3000/photos">View Photos</a></li>
+            <li><a href="http://localhost:3000/photos/new">Upload</a></li>
             <% if user_signed_in? %>
               <% if current_user.name %>
                 <li class='right-links'><%= link_to current_user.name.split.map(&:capitalize).join(' '), user_path(current_user)%></li>
