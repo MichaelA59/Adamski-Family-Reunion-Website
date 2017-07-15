@@ -17,7 +17,7 @@ User.destroy_all
 15.times do
   name     = Faker::Name.name,
   email    = Faker::Internet.email,
-  image    = Faker::Placeholdit.image("50x50", 'jpg')
+  image    = Faker::Avatar.image
   pass     = Faker::Internet.password
   User.create!(
     name:                  name[0],
