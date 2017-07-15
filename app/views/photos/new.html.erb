@@ -2,7 +2,7 @@
   <%= form_for [@photo] do |f| %>
 
     <div class="file-upload">
-      <%= f.file_field :photo %>
+      <%= f.file_field :photos, multiple: true %>
       <i class="fa fa-arrow-up"></i>
     </div>
 
