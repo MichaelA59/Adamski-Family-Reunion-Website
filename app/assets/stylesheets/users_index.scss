@@ -1,3 +1,4 @@
+
 .user-list {
   display: block;
   width: 100%;
@@ -70,5 +71,34 @@
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .user-list__active-user {
+    float: none;
+    width: 90%;
+    padding: 5px;
+    vertical-align: middle;
+    margin: auto;
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .user-list__all-users {
+    padding: 15px;
+    width: 90%;
+    float: none;
+    max-height: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .user-list__all-users {
+    max-height: 215px;
   }
 }

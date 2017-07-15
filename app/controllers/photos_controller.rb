@@ -48,6 +48,6 @@ class PhotosController < ApplicationController
   private
 
   def photo_params
-    params.require(:photo).permit(:photo, :user_id)
+    params.require(:photo).permit(:user_id, { photos: [] })
   end
 end
