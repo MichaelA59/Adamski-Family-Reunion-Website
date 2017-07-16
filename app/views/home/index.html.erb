@@ -8,7 +8,13 @@
         <div class='columns small-12 small-centered'>
           <!-- WELCOME TEXT -->
           <div class='hero-splash__cta-text'>
-            Welcome to the Adamski Family Reunion scrapbook. Sign up to post pictures
+            Welcome to the Adamski Family Reunion scrapbook Sign up to post pictures
+          </div>
+          <div class='hero-splash__cta-text__second'>
+            Welcome!
+          </div>
+          <div class='hero-splash__cta-text__second-two'>
+            Sign up to post pictures
           </div>
         </div>
       </div>
@@ -33,9 +39,10 @@
         </div>
       <% end %>
       <div class='row hero-splash__cta-view-more'>
-        <div class='columns small-12 small-centered'>
-          <h3>Recent Uploads</h3>
-          <a href='#app'></a>
+        <div class='columns small-12 small-centered text-center'>
+          <a href='#recent-uploads'>
+            <i class="fa fa-arrow-down fa-5x" aria-hidden="true"></i>
+          </a>
       </div>
     </div>
   </div>
@@ -43,7 +50,7 @@
 
 <div class='bumper-25'></div>
 
-<section>
+<section id='recent-uploads'>
   <!-- React component displaying most recent uploaded images -->
   <% if @all_photos.size > 0 %>
     <h1 class='text-center'> Most Recent Uploads </h1>
