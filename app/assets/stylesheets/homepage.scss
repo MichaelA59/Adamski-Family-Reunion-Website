@@ -23,6 +23,12 @@
       top: 41%;
       bottom: 20%;
       margin: auto;
+      @media screen and (max-width: 750px) {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+      }
       &-text {
         text-align: center;
         font-family: "Lato";
@@ -52,6 +58,13 @@
           text-shadow: 1px 1px black;
           font-size: 4.5em;
           line-height: 75px;
+            @media screen and (max-width: 750px) {
+              font-size: 3.2em;
+              line-height: .5em;
+            }
+            @media screen and (max-width: 527px) {
+              line-height: 1.5em
+            }
           &:hover,
           &:active {
             letter-spacing: 5px;
@@ -87,16 +100,11 @@
         i {
           color: #FBA100;
           margin-top: 15px;
+          @media screen and (max-width: 750px) {
+            display: none;
+          }
         }
       }
-      // &-view-more {
-      //   a {
-      //     width: 100px;
-      //     height: 100px;
-      //     background-image: url('arrow.png');
-      //     background-size: contain;
-      //   }
-      // }
     }
   }
 }
@@ -133,32 +141,27 @@
 
 
 @media screen and (max-width: 424px) {
-  .hero-splash__cta-text {
-    display: none;
-  }
-  .hero-splash__cta-text__second {
+  .hero-splash__cta-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    margin: 10px auto 0px;
+    z-index: 10;
     text-align: center;
-    font-family: "Lato";
-    font-weight: bold;
-    font-size: 3em;
-    color: white;
-    text-shadow: 1px 1px black;
-  }
-  .hero-splash__cta-text__second-two {
-    text-align: center;
-    font-family: "Lato";
-    font-weight: lighter;
-    font-size: 2.5em;
-    color: white;
-    text-shadow: 1px 1px black;
+    a {
+      font-size: 3em;
+      line-height: .5em;
+    }
   }
 }
 
-@media screen and (min-width: 425px) {
-  .hero-splash__cta-text__second {
-    display: none;
-  }
-  .hero-splash__cta-text__second-two {
-    display: none;
-  }
-}
+// @media screen and (min-width: 425px) {
+//   .hero-splash__cta-text__second {
+//     display: none;
+//   }
+//   .hero-splash__cta-text__second-two {
+//     display: none;
+//   }
+// }

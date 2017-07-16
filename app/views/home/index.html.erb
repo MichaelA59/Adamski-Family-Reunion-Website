@@ -6,43 +6,44 @@
     <div class='hero-splash__cta'>
       <div class='row'>
         <div class='columns small-12 small-centered'>
-          <!-- WELCOME TEXT -->
-          <div class='hero-splash__cta-text'>
-            Welcome to the Adamski Family Reunion scrapbook Sign up to post pictures
+          <!-- USER IS |NOT| SIGNED IN -->
+          <% if !user_signed_in? %>
+            <!-- Hero Header Text - UN-Authenticated! -->
+            <div class='hero-splash__cta-text'>
+              Welcome!Sign up to post pictures
+            </div>
+            <!-- Signup Button Container -->
+            <div class='row hero-splash__cta-button-container'>
+              <!-- Signup Button -->
+              <div class='columns small-12 small-centered'>
+                <a href='http://localhost:3000/users/sign_in' class='cta-button'>
+                  Let's Get Started
+                </a>
+              </div>
+            </div>
+          <!-- USER IS SIGNED IN -->
+          <% else %>
+            <!-- Hero Header Text - Authenticated-User -->
+            <div class='hero-splash__cta-text'>
+              Adamski Family Reunion 2017
+            </div>
+            <div class='row hero-splash__cta-button-container'>
+              <div class='columns small-12 medium-6 small-centered'>
+                <%= link_to 'View', photos_path, html_options = {class: 'cta-button'} %>
+              </div>
+            <div class='columns small-12 medium-6 small-centered'>
+              <%= link_to 'Upload', new_photo_path, html_options = {class: 'cta-button'} %>
+            </div>
           </div>
-          <div class='hero-splash__cta-text__second'>
-            Welcome!
-          </div>
-          <div class='hero-splash__cta-text__second-two'>
-            Sign up to post pictures
+        <% end %>
+
+        <div class='row hero-splash__cta-view-more'>
+          <div class='columns small-12 small-centered text-center'>
+            <a href='#recent-uploads'>
+              <i class="fa fa-arrow-down fa-5x" aria-hidden="true"></i>
+            </a>
           </div>
         </div>
-      </div>
-      <% if !user_signed_in? %>
-      <!-- Signup Button Container -->
-      <div class='row hero-splash__cta-button-container'>
-        <!-- Signup Button -->
-        <div class='columns small-12 small-centered'>
-          <a href='http://localhost:3000/users/sign_in' class='cta-button'>
-            Let's Get Started
-          </a>
-        </div>
-      </div>
-      <% else %>
-        <div class='row hero-splash__cta-button-container'>
-          <div class='columns small-12 medium-6 small-centered'>
-            <%= link_to 'View', photos_path, html_options = {class: 'cta-button'} %>
-          </div>
-          <div class='columns small-12 medium-6 small-centered'>
-            <%= link_to 'Upload', new_photo_path, html_options = {class: 'cta-button'} %>
-          </div>
-        </div>
-      <% end %>
-      <div class='row hero-splash__cta-view-more'>
-        <div class='columns small-12 small-centered text-center'>
-          <a href='#recent-uploads'>
-            <i class="fa fa-arrow-down fa-5x" aria-hidden="true"></i>
-          </a>
       </div>
     </div>
   </div>
