@@ -45,11 +45,19 @@
 
 <section>
   <!-- React component displaying most recent uploaded images -->
-  <% if @photos.size > 0 %>
+  <% if @all_photos.size > 0 %>
     <h1 class='text-center'> Most Recent Uploads </h1>
   <% else %>
     <h1 class='text-center'> Be the first to upload a photo! </h1>
   <% end %>
+
   <div class='bumper-25'></div>
-  <div id='app'></div>
+
+  <div class='recent-uploads--container'>
+    <% @plucked_photos.each do |thing| %>
+    <div class='recent-uploads--wrapper'>
+      <%= image_tag "#{thing.to_s}", class: 'recent-uploads--img' %>
+    </div>
+    <% end %>
+  </div>
 </section>
