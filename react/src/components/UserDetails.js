@@ -10,7 +10,7 @@ class UserDetails extends React.Component {
 
   render(){
     return(
-      <div className='text-center user-card active'>
+      <div className={"text-center user-card active " + this.props.className}>
         <img
           src={`${this.props.avatar}`}
           width='250'
