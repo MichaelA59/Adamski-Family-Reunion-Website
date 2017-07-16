@@ -1,9 +1,21 @@
 class PhotosController < ApplicationController
 
   def index
+    @plucked_photos = []
+    @photos = Photo.all
+    @photos.each do |thing|
+      if thing.photos.kind_of?(String)
+        @plucked_photos << thing.photos.to_s
+      else
+        thing.photos.each do |other|
+          @plucked_photos << other.url.to_s
+        end
+      end
+    end
     @user = current_user
     @users = User.all
     @photos = Photo.all
+
   end
 
   def show

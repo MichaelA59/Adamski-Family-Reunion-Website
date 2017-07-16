@@ -4,7 +4,10 @@
 <section class='landing-page'>
   <div class='row'>
     <div class='columns small-12 small-centered text-center'>
-      <h1> Family Photos </h1>
+      <% if !@photos.nil? %>
+        <h1> Family Photos </h1>
+        <h4><%= @plucked_photos.size %> Photos Uploaded</h4>
+      <% end %>
     </div>
   </div>
 </section>
