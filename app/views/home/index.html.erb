@@ -61,7 +61,7 @@
   <div class='bumper-25'></div>
 
   <div class='recent-uploads--container'>
-    <% @plucked_photos.each do |thing| %>
+    <% @plucked_photos.last(10).each do |thing| %>
     <div class='recent-uploads--wrapper'>
       <%= image_tag "#{thing.to_s}", class: 'recent-uploads--img' %>
     </div>
