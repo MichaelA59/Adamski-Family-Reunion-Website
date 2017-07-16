@@ -37,7 +37,7 @@
       <% @photos.each do |uploads| %>
         <% uploads.photos.each do |photo| %>
           <div class='recent-uploads--wrapper'>
-            <%= image_tag "#{photo.versions[:medium].to_s}", class: 'recent-uploads--img' %>
+            <%= image_tag "#{photo.url.to_s}", class: 'recent-uploads--img' %>
           </div>
         <% end %>
       <% end %>

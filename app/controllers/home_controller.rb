@@ -8,7 +8,7 @@ class HomeController < ApplicationController
         @plucked_photos << thing.photos.to_s
       else
         thing.photos.each do |other|
-          @plucked_photos << other.versions[:medium].to_s
+          @plucked_photos << other.url.to_s
         end
       end
     end
