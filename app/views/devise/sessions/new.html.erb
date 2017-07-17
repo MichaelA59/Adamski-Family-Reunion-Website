@@ -1,5 +1,5 @@
+<div class='bumper-25'></div>
 <h2 class='text-center'>Log in or Sign up</h2>
-
 <div class='bumper-25'></div>
 
 <section>
@@ -38,6 +38,14 @@
     <div class='row'>
       <div class='columns small-12 small-centered text-center'>
         <a href="http://localhost:3000/users/auth/facebook" class="form--login__facebook-btn"> <span>Connect with Facebook</span></a>
+      </div>
+    </div>
+
+  <br/>
+
+    <div class='row'>
+      <div class='columns small-12 small-centered text-center'>
+        <%= link_to 'Or Create a New Account', new_user_registration_path, class: 'form--login__create-account' %>
       </div>
     </div>
   <% end %>
