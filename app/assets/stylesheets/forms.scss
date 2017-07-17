@@ -8,15 +8,18 @@
       height: auto;
       margin: auto;
       width: 25%;
-      padding: 1%;
-      @media(max-width: 1200px) {
+      padding: 2%;
+      @media(max-width: 1024px) {
+        width: 33%;
+      }
+      @media(max-width: 768px) {
         width: 50%;
       }
-      @media(max-width: 760px) {
-        width: 75%;
+      @media(max-width: 425px) {
+        width: 80%;
       }
-      @media(max-width: 480px) {
-        width: 85%;
+      @media(max-width: 320px) {
+        width: 90%;
       }
       &:hover {
     	  box-shadow: 1px 2px 20px rgb(85,85,85);
@@ -111,16 +114,16 @@
       box-shadow: 1px 1px 10px rgb(85,85,85);
       height: auto;
       margin: auto;
-      width: 25%;
-      padding: 1%;
-      @media(max-width: 1200px) {
-        width: 50%;
+      width: 33%;
+      padding: 2%;
+      @media(max-width: 1024px) {
+        width: 41%;
       }
-      @media(max-width: 760px) {
-        width: 75%;
+      @media(max-width: 768px) {
+        width: 52%;
       }
-      @media(max-width: 480px) {
-        width: 85%;
+      @media(max-width: 425px) {
+        width: 91%;
       }
       &:hover {
     	  box-shadow: 1px 2px 20px rgb(85,85,85);
@@ -130,9 +133,15 @@
       text-transform: capitalize;
       .left {
         float: left;
+        @media(max-width: 768px) {
+          float: none;
+        }
       }
       .right {
-        float: right
+        float: right;
+        @media(max-width: 768px) {
+          float: none;
+        }
       }
       &--email {
         clear: both
