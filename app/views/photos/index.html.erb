@@ -1,27 +1,25 @@
+<div class='bumper-25'></div>
+<div class='bumper-25'></div>
+
 <section class='landing-page'>
-  <div class='row hero-splash__cta-button-container'>
-    <div class='columns small-12 medium-6 small-centered'>
-      <%= link_to 'Photos', photos_path, html_options = {class: 'cta-button'} %>
-    </div>
-    <div class='columns small-12 medium-6 small-centered'>
-      <%= link_to 'Family Members', users_path, html_options = {class: 'cta-button'} %>
+  <div class='row'>
+    <div class='columns small-12 small-centered text-center'>
+      <% if !@photos.nil? %>
+        <h1> Family Photos </h1>
+        <h4><%= @plucked_photos.size %> Photos Uploaded</h4>
+      <% end %>
     </div>
   </div>
 </section>
 
 <div class='bumper-25'></div>
-<div class='bumper-25'></div>
 
 <% if !@photos.nil? %>
-  <div class='row small-up-1 medium-up-2 large-up-3'>
+  <div class='recent-uploads--container'>
     <% @photos.each do |photos| %>
       <% photos.photos.each do |photo| %>
-        <div class='column column-block'>
-          <div class='user-upload'>
-            <div class='user-upload--img-wrapper'>
-              <%= link_to image_tag(photo.versions[:medium].to_s), photo_path(photos.id) %>
-            </div>
-          </div>
+        <div class='recent-uploads--wrapper'>
+          <%= link_to image_tag(photo.url.to_s), photo_path(photos.id), class: 'recent-uploads--img' %>
         </div>
       <% end %>
     <% end %>

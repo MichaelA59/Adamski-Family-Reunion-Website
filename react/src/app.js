@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Photo from './components/Photo';
-// var Slider = require('react-slick')
 import Slider from 'react-slick';
 
 class App extends Component {

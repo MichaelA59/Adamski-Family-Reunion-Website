@@ -4,7 +4,6 @@
   display:flex;
   align-items:center;
   justify-content:center;
-  background-image: linear-gradient(to bottom, #fff 15%, rgba(226,76,12,.57) 56%);
   position: relative;
   .file-upload{
     height: 300px;
@@ -16,11 +15,11 @@
     align-items: center;
     border: 5px solid #c5c5c5;
     overflow: hidden;
-    background-image: linear-gradient(to bottom, #FBA100 5%, #6C648B 36%);
-    background-size: 100% 200%;
-    transition: all 1s;
+    background-color: rgb(136,136,136);
+    transition: all 300ms;
     color: #FFFFFF;
     font-size: 150px;
+    transition: all 100ms ease-in-out;
     input[type='file']{
       height:200px;
       width:200px;
@@ -31,8 +30,8 @@
       cursor:pointer;
     }
     &:hover{
-      background-position: 0 -100%;
-      color:#2590EB;
+      transition: all 100ms ease-in-out;
+      color: black;
     }
   }
   .button-container {
@@ -42,14 +41,13 @@
     align-content: center;
     flex-wrap: wrap;
     margin: 50px auto 0px;
-    padding: 10px;
+    padding: 5px;
     z-index: 10;
     text-align: center;
     .button {
       color: #FBA100;
       display: block;
-      font-size:3.5em;
-      font-weight: bold;
+      font-size: 3em;
       line-height: 45px;
       margin: 0 auto;
       max-width: 550px;
@@ -57,9 +55,12 @@
       width: 100%;
       letter-spacing: 0;
       text-shadow: 1px 1px black;
+      border-radius: 15px;
+      transition: all 250ms ease-in-out;
       &:hover,
       &:active {
-        letter-spacing: 5px;
+        border-radius: 150px;
+        transition: all 250ms ease-in-out;
       }
       &:after,
       &:before {
@@ -86,5 +87,29 @@
         width: 75%;
       }
     }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .bumper-100--upload {
+    height: 25px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .wrapper .button-container {
+    margin: 25px auto 0px;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .bumper-100--upload {
+    height: 100px;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .wrapper .button-container {
+    margin: 50px auto 0px;
   }
 }

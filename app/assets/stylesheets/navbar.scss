@@ -1,11 +1,31 @@
 @import "variables";
 
-.example5 .navbar-brand {
+.navbar-brand {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
   display: flex;
   align-items: center;
   margin: auto;
 }
-.example5 .navbar-brand>img {
+
+.navbar-brand-mobile {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  img {
+    padding: 7px 14px;
+    height: 50px;
+    width: 50px;
+  }
+}
+
+.navbar-brand>img {
   padding: 7px 14px;
   height: 50px;
   width: 50px;
@@ -20,7 +40,7 @@
 }
 
 .navbar-alignit .navbar-header {
-	  -webkit-transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
   height: 50px;
@@ -29,7 +49,7 @@
 .navbar-alignit .navbar-brand {
 	top: 50%;
 	display: block;
-	position: relative;
+	position: absolute;
 	transform: translate(0,-50%);
 	margin-right: 5px;
   margin-left: 5px;
@@ -44,10 +64,58 @@
 @media (max-width: 767px) {
     .navbar-nav > li > a {
     line-height: 20px;
-    padding-top: 0px;
-    padding-bottom: 0px;}
+  }
 }
 
 .navbar-nav>li>.dropdown-menu {
 	z-index: 9999;
+}
+
+@media screen and (min-width: 1000px) {
+  .navbar-brand-mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .navbar-brand {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .navbar-header {
+    float: none;
+  }
+  .navbar-left,.navbar-right {
+    float: none !important;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-fixed-top {
+	  top: 0;
+	  border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+    display: none!important;
+  }
+  .navbar-nav {
+    float: none!important;
+	  margin-top: 7.5px;
+  }
+  .navbar-nav>li {
+    float: none;
+  }
+  .navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .collapse.in{
+		display:block !important;
+  }
 }

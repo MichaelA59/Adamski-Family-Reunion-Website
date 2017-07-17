@@ -33,15 +33,11 @@
 
 <% if !@photos.nil? %>
 <section>
-    <div class='row small-up-1 medium-up-2 large-up-3'>
+    <div class='recent-uploads--container'>
       <% @photos.each do |uploads| %>
         <% uploads.photos.each do |photo| %>
-          <div class='column column-block'>
-            <div class='user-upload'>
-              <div class='user-upload--img-wrapper'>
-                <%= image_tag "#{photo.versions[:medium].to_s}" %>
-              </div>
-            </div>
+          <div class='recent-uploads--wrapper'>
+            <%= image_tag "#{photo.url.to_s}", class: 'recent-uploads--img' %>
           </div>
         <% end %>
       <% end %>

@@ -7,7 +7,7 @@ class UsersContainer extends Component {
     super(props);
     this.state = {
       users: [],
-      selectedUserId: 1,
+      selectedUserId: 0,
       selectedUserInfo: {}
     }
     this.fetchUsers = this.fetchUsers.bind(this)
@@ -41,6 +41,14 @@ class UsersContainer extends Component {
 
   render() {
 
+    let activeClassName = ''
+    if (this.state.selectedUserId > 0) {
+      activeClassName = ''
+    }
+    else {
+      activeClassName = 'hidden'
+    }
+
     let users = this.state.users.map(user => {
       let className = '';
       if (this.state.selectedUserId === user.id) {
@@ -50,7 +58,6 @@ class UsersContainer extends Component {
       let handleUserSelect = () => {
         this.handleUserSelect(user.id)
       }
-
       return(
         <User
           key={user.id}
@@ -62,7 +69,6 @@ class UsersContainer extends Component {
         />
       )
     })
-
     return (
       <div className='user-list'>
         <div className='user-list__all-users'>
@@ -75,6 +81,7 @@ class UsersContainer extends Component {
             name={this.state.selectedUserInfo.name}
             email={this.state.selectedUserInfo.email}
             avatar={this.state.selectedUserInfo.image}
+            className={activeClassName}
           />
         </div>
       </div>
