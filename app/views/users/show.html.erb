@@ -3,6 +3,9 @@
     <div class="profile-top--title">
       <h1><%= @user.name %></h1>
       <h5><%= @user.email %></h5>
+      <% if @user.phone_number %>
+        <h5><%= @user.phone_number %></h5>
+      <% end %>
       <div class='profile-top--profile-picture'>
         <% if @user.image %>
         <div class='profile-top--profile-picture__img-wrapper'>
@@ -29,7 +32,50 @@
   <% end %>
 <% end %>
 
-<div class='bumper-100'></div>
+<div class='bumper-25'></div>
+
+<div class='row'>
+  <div class='columns small-12 small-centered text-center'>
+    <h2>Details</h2>
+  </div>
+</div>
+
+<div class='bumper-25'></div>
+
+<div class='row'>
+  <div class='columns small-12 medium-6'>
+    <% if @user.mother %>
+      <h4>Mother: <%= @user.mother %>
+    <% else %>
+      <h4>Mother: N/A
+    <% end %>
+  </div>
+  <div class='columns small-12 medium-6'>
+    <% if @user.father %>
+      <h4>Father: <%= @user.father %>
+    <% else %>
+      <h4>Father: N/A
+    <% end %>
+  </div>
+</div>
+<div class='row'>
+  <div class='columns small-12 medium-6'>
+    <% if @user.city && @user.state %>
+      <h4>Location: <%= @user.city + ', ' + @user.state%>
+    <% elsif @user.city && @user.state.nil? %>
+      <h4>Location: <%= @user.city %></h4>
+    <% else %>
+      <h4>Location: <%= @user.state %></h4>
+    <% end %>
+  </div>
+  <div class='columns small-12 medium-6'>
+    <% if @user.address %>
+      <h4>Address: <%= @user.address %></h4>
+    <% else %>
+      <h4>Address: N/A</h4>
+    <% end %>
+  </div>
+</div>
 
 <% if !@photos.nil? %>
 <section>

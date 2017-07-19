@@ -48,6 +48,7 @@
         text-align: center;
         .cta-button {
           color: #FBA100;
+          font-family: 'Nunito';
           display: block;
           font-weight: bold;
           margin: 0 auto;
@@ -56,7 +57,7 @@
           width: 100%;
           letter-spacing: 0;
           text-shadow: 1px 1px black;
-          font-size: 4.5em;
+          font-size: 4em;
           line-height: 75px;
             @media screen and (max-width: 750px) {
               font-size: 3.2em;
