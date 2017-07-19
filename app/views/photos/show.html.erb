@@ -2,8 +2,20 @@
 
 <div class='bumper-25'></div>
 
-  <div class='row small-12 small-centered'>
-    <%= image_tag "#{@photo.photo}" %>
+<% if @photo.photos.class.to_s == 'Array' %>
+  <div class='recent-uploads--container'>
+    <% @photo.photos.each do |img| %>
+      <div class='recent-uploads--wrapper'>
+        <%= image_tag "#{img.url}" %>
+      </div>
+    <% end %>
   </div>
+<% else %>
+  <div class='row'>
+    <div class='columns small-12 small-centered text-center'>
+      <%= image_tag(@photo.photos) %>
+    </div>
+  </div>
+<% end %>
 
   <div class='bumper-100'></div>
