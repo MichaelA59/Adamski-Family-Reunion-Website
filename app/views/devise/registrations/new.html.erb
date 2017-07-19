@@ -31,6 +31,8 @@
       <%= f.password_field :password_confirmation, autocomplete: "off" %>
     </div>
 
+    <%= f.file_field :image %>
+
     <% if devise_mapping.rememberable? -%>
       <div class="form--signup__field">
         <%= f.check_box :remember_me %>

@@ -122,8 +122,12 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable,
          :omniauth_providers => [:facebook]
 
+  # CarrierWave Mounted Uploader for Avatar as well as
+  # AcrtiveRecord relation to photos
   has_many :photos
+  mount_uploader :image, PhotoUploader
 
+  # Authentication for OAuth - Facebook
   def self.from_omniauth(auth)
    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
      user.email = auth.info.email
