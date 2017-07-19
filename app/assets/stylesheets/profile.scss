@@ -1,3 +1,5 @@
+@import 'variables';
+
 .complete-profile {
   &--container {
     border: 1px solid rgb(131,131,131);
@@ -11,8 +13,6 @@
     font-family: 'Lato';
   }
 }
-
-
 
 .profile-container {
   position: relative;
@@ -65,6 +65,19 @@
         left: 50%;
         position: absolute;
       }
+    }
+  }
+}
+
+
+.user-show-details {
+  h4 {
+    color: black;
+    font-family: 'Lato';
+    #bio-details-item {
+      font-size: .85em;
+      color: #FBA100;
+      font-weight: 200;
     }
   }
 }
