@@ -4,6 +4,10 @@ Rails.application.routes.draw do
 
   devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks"}
 
+  authenticate :user do
+    resources :photos, only: [:new]
+  end
+
   resources :users
   resources :photos
 

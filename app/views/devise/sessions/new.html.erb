@@ -6,11 +6,6 @@
   <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'form--login__box'}) do |f| %>
 
     <div class="form--login__field">
-      <%= f.label :name %><br />
-      <%= f.email_field :name, autofocus: true %>
-    </div>
-
-    <div class="form--login__field">
       <%= f.label :email %><br />
       <%= f.email_field :email, autofocus: true %>
     </div>
