@@ -3,6 +3,9 @@
     <div class="profile-top--title">
       <h1><%= @user.name %></h1>
       <h5><%= @user.email %></h5>
+      <% if @user.phone_number %>
+        <h5><%= @user.phone_number %></h5>
+      <% end %>
       <div class='profile-top--profile-picture'>
         <% if @user.image %>
         <div class='profile-top--profile-picture__img-wrapper'>
@@ -17,7 +20,7 @@
 
 <div class="bumper-100"></div>
 
-
+<!-- Conditional Button for completing details bio if not complete -->
 <% if @current_user.id == @user.id %>
   <% if @complete_profile == false %>
     <div class='row'>
@@ -26,11 +29,64 @@
         class: "complete-profile--btn" %>
       </div>
     </div>
+  <% else %>
+    <div class='row'>
+      <div class='columns small-centered small-12 medium-3 text-center'>
+        <%= link_to 'Edit Profile', edit_user_path %>
+      </div>
+    </div>
   <% end %>
 <% end %>
 
-<div class='bumper-100'></div>
+<!-- Optional User Details (Details Bio) -->
+<div class='row'>
+  <div class='columns small-12 small-centered text-center'>
+    <h2>Details</h2>
+  </div>
+</div>
 
+<div class='bumper-25'></div>
+
+<div class='row user-show-details'>
+  <div class='columns small-12 medium-6 text-center'>
+    <% if @user.mother %>
+      <h4><span id='bio-details-item'>Mother | </span><%= @user.mother %>
+    <% else %>
+      <h4><span id='bio-details-item'>Mother | </span>N/A
+    <% end %>
+  </div>
+  <div class='columns small-12 medium-6 text-center'>
+    <% if @user.father %>
+      <h4><span id='bio-details-item'>Father | </span><%= @user.father %>
+    <% else %>
+      <h4><span id='bio-details-item'>Father | </span>N/A
+    <% end %>
+  </div>
+</div>
+<div class='row user-show-details'>
+  <div class='columns small-12 medium-6 text-center'>
+    <% if @user.city && @user.state %>
+      <h4><span id='bio-details-item'>Location | </span><%= @user.city + ', ' + @user.state%>
+    <% elsif @user.city && @user.state.nil? %>
+      <h4><span id='bio-details-item'>Location | </span><%= @user.city %></h4>
+    <% elsif @user.state && @user.city.nil? %>
+      <h4><span id='bio-details-item'>Location | </span><%= @user.state %></h4>
+    <% else %>
+      <h4><span id='bio-details-item'>Location | </span>N/A</h4>
+    <% end %>
+  </div>
+  <div class='columns small-12 medium-6 text-center'>
+    <% if @user.address %>
+      <h4><span id='bio-details-item'>Address | </span><%= @user.address %></h4>
+    <% else %>
+      <h4><span id='bio-details-item'>Address | </span>N/A</h4>
+    <% end %>
+  </div>
+</div>
+
+<div class='bumper-24'></div>
+
+<!-- All of this user's uploaded pictures -->
 <% if !@photos.nil? %>
 <section>
     <div class='recent-uploads--container'>

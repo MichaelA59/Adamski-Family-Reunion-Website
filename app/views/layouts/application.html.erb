@@ -24,11 +24,11 @@
             <span class="icon-bar"></span>
           </button>
           <%= link_to root_path, :class => "navbar-brand" do %>
-            <%= image_tag("adamski-crest", :alt => "Adamski Crest") %>
+            <%= image_tag("adamski-crest", :alt => "Adamski Crest", class: 'logo') %>
             <span>Adamski Family Reunion</span>
           <% end %>
           <%= link_to root_path, :class => "navbar-brand-mobile" do %>
-            <%= image_tag("adamski-crest", :alt => "Adamski Crest") %>
+            <%= image_tag("adamski-crest", :alt => "Adamski Crest", class: 'logo-mobile') %>
             <span>Adamski Family Reunion</span>
           <% end %>
         </div>
@@ -57,28 +57,11 @@
 
   </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <%= yield %>
 
     <footer>
       <div class="row">
-        <div class="columns small-6">
+        <div class="columns small-12 medium-6">
           <p>
             <span class='nav-logo'><%= link_to "Adamski Family Reunion", root_path %></span>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;© 2017 All Rights Reserved.

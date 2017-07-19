@@ -8,6 +8,12 @@
   display: flex;
   align-items: center;
   margin: auto;
+  font-family: 'Nunito';
+  font-weight: lighter;
+  .logo {
+    height: 100px;
+    width: 100px;
+  }
 }
 
 .navbar-brand-mobile {
@@ -18,10 +24,10 @@
   display: flex;
   align-items: center;
   margin: auto;
-  img {
+  .logo-mobile {
     padding: 7px 14px;
-    height: 50px;
-    width: 50px;
+    height: 65px;
+    width: 65px;
   }
 }
 
