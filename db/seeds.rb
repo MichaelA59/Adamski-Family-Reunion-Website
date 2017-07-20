@@ -19,7 +19,6 @@ User.destroy_all
   email    = Faker::Internet.email,
   image    = Faker::Avatar.image,
   pass     = Faker::Internet.password
-
   User.create!(
     name:                  name[0],
     email:                 email,
