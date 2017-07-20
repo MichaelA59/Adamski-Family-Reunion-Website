@@ -17,13 +17,13 @@ User.destroy_all
 15.times do
   name     = Faker::Name.name,
   email    = Faker::Internet.email,
-  image    = Faker::Avatar.image
+  image    = Faker::Avatar.image,
   pass     = Faker::Internet.password
 
   User.create!(
     name:                  name[0],
     email:                 email,
     image:                 image,
-    password:    pass
+    password:              pass
   )
 end
