@@ -9,3 +9,10 @@ Rails.application.config.assets.version = '1.0'
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
+
+Dir[ Rails.root.join('react','**') ].each do |dir|
+  dir = Pathname.new(dir)
+  Rails.application.config.assets.precompile += Dir[ dir.join('**','*') ].select{ |f| File.file?(f) }.map{ |f|
+    Pathname.new(f).relative_path_from(dir).to_s
+  }
+end
