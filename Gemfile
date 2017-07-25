@@ -14,6 +14,7 @@ gem 'mini_magick'
 gem 'fog'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '>= 3.2'
+gem 'dotenv'
 
 group :development do
   gem 'listen', '~> 3.0.5'
@@ -30,6 +31,7 @@ group :development, :test do
   gem 'shoulda'
   gem 'valid_attribute'
   gem 'faker'
+  gem "dotenv-rails"
 end
 
 group :production do
