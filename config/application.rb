@@ -23,3 +23,5 @@ module AdamskiFamilyReunionWebsite
     # -- all .rb files in that directory are automatically loaded.
   end
 end
+
+config.assets.precompile += [Rails.root.join("react", "**", "*.js")]
