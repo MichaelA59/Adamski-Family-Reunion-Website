@@ -6,7 +6,9 @@
     <div class='columns small-12 small-centered text-center'>
       <% if !@photos.nil? %>
         <h1> Family Photos </h1>
-        <h4><%= @plucked_photos.size %> Photos Uploaded</h4>
+        <% if @photos.size > 0 %>
+          <h4><%= @plucked_photos.size %> Photos Uploaded</h4>
+        <% end %>
       <% end %>
     </div>
   </div>
@@ -14,16 +16,23 @@
 
 <div class='bumper-25'></div>
 
-<% if !@photos.nil? %>
+<% if @photos.length > 0 %>
   <div class='recent-uploads--container'>
     <% @photos.each do |photos| %>
       <% photos.photos.each do |photo| %>
         <div class='recent-uploads--wrapper'>
-          <%= link_to image_tag(photo.url.to_s), photo_path(photos.id), class: 'recent-uploads--img' %>
+          <%= link_to image_tag(photo.to_s), photo_path(photos.id), class: 'recent-uploads--img' %>
         </div>
       <% end %>
     <% end %>
   </div>
   <% else %>
-    <p> No Photos yet, check back soon though! </p>
+    <div class='row'>
+      <div class='columns small-12 text-center'>
+        <h3> No Photos yet, check back soon though! </h3>
+      </div>
+    </div>
 <% end %>
+
+<div class='bumper-25'></div>
+<div class='bumper-25'></div>

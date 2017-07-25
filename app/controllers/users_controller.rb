@@ -8,13 +8,16 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @photos = Photo.where(user_id: @user.id)
     @current_user = current_user
-    if
-      @current_user.mother.nil? || @current_user.father.nil? || @current_user.city.nil? ||
-      @current_user.state.nil? || @current_user.phone_number.nil? ||
-      @current_user.address.nil?
-      @complete_profile = false
-    else
-      @complete_profile = true
+    if user_signed_in?
+      if
+        @current_user.mother.nil? || @current_user.father.nil? || @current_user.city.nil? ||
+        @current_user.state.nil? || @current_user.phone_number.nil? ||
+        @current_user.address.nil?
+
+        @complete_profile = false
+      else
+        @complete_profile = true
+      end
     end
   end
 

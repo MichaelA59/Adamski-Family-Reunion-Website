@@ -90,6 +90,23 @@
   }
 }
 
+
+// Image Show Page
+
+.image-show {
+  h1 {
+    a {
+      text-decoration: none;
+      color: #FBA100;
+      &:hover {
+        text-decoration: none;
+        color: #FBA100;
+      }
+    }
+  }
+}
+
+
 @media screen and (max-width: 767px) {
   .bumper-100--upload {
     height: 25px;

@@ -19,7 +19,24 @@ class User < ApplicationRecord
     ["Catherine Skiba", "Catherine Skiba"],
     ["Helene Adamski Szewczyk","Helene Adamski Szewczyk"],
     ["Karen Bartold Szewczyk","Karen Bartold Szewczyk"],
+    ["Christine Patchan Szewczyk","Christine Patchan Szewczyk"],
+    ["Rachel Szewczyk","Rachel Szewczyk"],
+    ["Christina Lee Szewczyk","Christina Lee Szewczyk"],
+    ["Karen Bartold Szewczyk","Karen Bartold Szewczyk"],
+    ["Angela Archibold Szewczyk","Angela Archibold Szewczyk"],
+    ["Gabriella Szewczyk","Gabriella Szewczyk"],
+    ["Elizabeth Ferarro Szewczyk","Elizabeth Ferarro Szewczyk"],
+    ["Alison Szewczyk McKeen","Alison Szewczyk McKeen"],
+    ["Kristi Elder Szewczyk","Kristi Elder Szewczyk"],
+    ["Erin Szewczyk","Erin Szewczyk"],
+    ["Jessica Szewczyk Russell","Jessica Szewczyk Russell"],
     ["Karen Kuczarski McGettrick","Karen Kuczarski McGettrick"],
+    ["April Dobbs McGettrick","April Dobbs McGettrick"],
+    ["Colleen Mears McGettrick","Colleen Mears McGettrick"],
+    ["Ashlyn McGettrick","Ashlyn McGettrick"],
+    ["Brynne McGettrick","Brynne McGettrick"],
+    ["Parker McGettrick","Parker McGettrick"],
+    ["Paige McGettrick","Paige McGettrick"],
     ["Mary Kuczarski","Mary Kuczarski"],
     ["Lisa Kuczarski ","Lisa Kuczarski "],
     ["Antoinette Adamski Pieniazek","Antoinette Adamski Pieniazek"],
@@ -49,14 +66,26 @@ class User < ApplicationRecord
     ["Michael Szewczyk","Michael Szewczyk"],
     ["Thomas Szewczyk","Thomas Szewczyk"],
     ["William Szewczyk","William Szewczyk"],
+    ["Jacob Szewczyk","Jacob Szewczyk"],
+    ["Joseph Szewczyk","Joseph Szewczyk"],
+    ["Paul Szewczyk","Paul Szewczyk"],
+    ["Michael Szewczyk","Michael Szewczyk"],
+    ["Ryan McKeen","Ryan McKeen"],
+    ["Thomas Szewczyk","Thomas Szewczyk"],
+    ["Thomas Russell","Thomas Russell"],
+    ["Daniel Szewczyk","Daniel Szewczyk"],
     ["Frank Kuczarski","Frank Kuczarski"],
     ["Paul McGettrick","Paul McGettrick"],
+    ["Brant McGettrick","Brant McGettrick"],
+    ["Devin McGettrick","Devin McGettrick"],
     ["Franklin Kuczarski","Franklin Kuczarski"],
     ["Robert Nicholl","Robert Nicholl"],
     ["Donald Kuczarski","Donald Kuczarski"],
     ["Thadius Pieniazek","Thadius Pieniazek"],
     ["Matthew Pieniazek","Matthew Pieniazek"],
     ["Michael Pieniazek","Michael Pieniazek"],
+    ["Josh Pieniazek","Josh Pieniazek"],
+    ["Jake Pieniazek","Jake Pieniazek"],
     ["John Slosek Jr.","John Slosek Jr."],
     ["David Pieniazek","David Pieniazek"]
   ].freeze
@@ -122,8 +151,12 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable,
          :omniauth_providers => [:facebook]
 
+  # CarrierWave Mounted Uploader for Avatar as well as
+  # AcrtiveRecord relation to photos
   has_many :photos
+  # mount_uploader :image, ImageUploader
 
+  # Authentication for OAuth - Facebook
   def self.from_omniauth(auth)
    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
      user.email = auth.info.email
@@ -132,6 +165,4 @@ class User < ApplicationRecord
      user.image = auth.info.image
     end
   end
-
-
 end

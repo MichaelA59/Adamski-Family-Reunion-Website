@@ -40,7 +40,6 @@ class UsersContainer extends Component {
   }
 
   render() {
-
     let activeClassName = ''
     if (this.state.selectedUserId > 0) {
       activeClassName = ''
