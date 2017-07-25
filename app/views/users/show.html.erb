@@ -91,7 +91,7 @@
   </div>
 </div>
 
-<div class='bumper-24'></div>
+<div class='bumper-25'></div>
 
 <!-- All of this user's uploaded pictures -->
 <% if !@photos.nil? %>
@@ -100,7 +100,7 @@
       <% @photos.each do |uploads| %>
         <% uploads.photos.each do |photo| %>
           <div class='recent-uploads--wrapper'>
-            <%= image_tag "#{photo.url.to_s}", class: 'recent-uploads--img' %>
+            <%= link_to image_tag(photo.to_s), photo_path(uploads.id), class: 'recent-uploads--img' %>
           </div>
         <% end %>
       <% end %>

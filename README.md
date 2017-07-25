@@ -8,7 +8,7 @@
 * Backend will be Rails and PostgreSQL with the front-end being mostly Rails
 * React to be used for User Index page for a more dynamic experience (scrolling list of users and stateful rendering of associated user cards to the right)
 
-### Instructions 
+### Instructions
 
 * Clone
 * Run `bundle install`
