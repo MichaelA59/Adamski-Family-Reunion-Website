@@ -65,6 +65,8 @@ class UsersContainer extends Component {
           avatar={user.image}
           className={className}
           handleUserSelect={handleUserSelect}
+          firstName={user.first_name}
+          lastName={user.last_name}
         />
       )
     })
