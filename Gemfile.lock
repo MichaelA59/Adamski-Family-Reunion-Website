@@ -405,7 +405,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass (~> 3.3.6)
   capybara
-  carrierwave
+  carrierwave (~> 1.0)
   devise
   dotenv
   dotenv-rails
