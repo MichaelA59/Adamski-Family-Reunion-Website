@@ -14,7 +14,8 @@
       <%= image_tag "#{img.url}" %>
     </div>
   <% end %>
-  <%= link_to "Delete Photos", photo_path, method: :delete %>
+  <div class='bumper-25'></div>
+  <%= link_to "Delete Photos", photo_path(@photo), method: :delete, class: 'button' %>
 </div>
 
 <div class='bumper-100'></div>
