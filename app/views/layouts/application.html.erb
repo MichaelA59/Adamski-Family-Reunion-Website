@@ -37,6 +37,7 @@
             <li><a href="http://www.adamskitree.com/users">Family Directory</a></li>
             <li><a href="http://www.adamskitree.com/photos">View Photos</a></li>
             <li><a href="http://www.adamskitree.com/photos/new">Upload</a></li>
+            <li><a href="http://www.adamskitree.com/tips">How It Works</a></li>
             <% if user_signed_in? %>
               <% if current_user.name %>
                 <li class='right-links'><%= link_to current_user.name.split.map(&:capitalize).join(' '), user_path(current_user)%></li>
@@ -66,6 +67,12 @@
             <span class='nav-logo'><%= link_to "Adamski Family Reunion", root_path %></span>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;© 2017 All Rights Reserved.
           </p>
+        </div>
+        <div class='columns small-12 medium-6'>
+          <h4 class='contact'>
+            Having Issues?
+            <%= mail_to 'mvadamski@gmail.com', "Contact Me!" %>
+          </h4>
         </div>
       </div>
     </footer>
