@@ -82,9 +82,9 @@ class UsersContainer extends Component {
             name={this.state.selectedUserInfo.name}
             email={this.state.selectedUserInfo.email}
             avatar={this.state.selectedUserInfo.image}
+            firstName={this.state.selectedUserInfo.first_name}
+            lastName={this.state.selectedUserInfo.last_name}
             className={activeClassName}
-            firstName={user.first_name}
-            lastName={user.last_name}
           />
         </div>
       </div>

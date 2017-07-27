@@ -34,9 +34,9 @@
         </div>
         <div id="navbar5" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="http://www.adamskitree.com/users">Family Directory</a></li>
-            <li><a href="http://www.adamskitree.com/photos">View Photos</a></li>
-            <li><a href="http://www.adamskitree.com/photos/new">Upload</a></li>
+            <li><a href="http://localhost:3000/users">Family Directory</a></li>
+            <li><a href="http://localhost:3000/photos">View Photos</a></li>
+            <li><a href="http://localhost:3000/photos/new">Upload</a></li>
             <% if user_signed_in? %>
               <% if current_user.name %>
                 <li class='right-links'><%= link_to current_user.name.split.map(&:capitalize).join(' '), user_path(current_user)%></li>
