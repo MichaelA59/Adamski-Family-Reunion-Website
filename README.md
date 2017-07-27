@@ -15,4 +15,4 @@
 * Run `bundle install`
 * Run `npm install`
 * Run `rails s` in your terminal and `npm start` in another tab from your terminal
-* Go to `localhost:3000` *Replace all instances of `www.adamskitree.com` with `localhost:3000`*
+* Go to `www.adamskitree.com` *Replace all instances of `www.adamskitree.com` with `www.adamskitree.com`*
