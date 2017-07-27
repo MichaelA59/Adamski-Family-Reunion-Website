@@ -8,7 +8,8 @@
       <% end %>
       <h5><%= @user.email %></h5>
       <% if @user.phone_number %>
-        <h5><%= @user.phone_number %></h5>
+      <h5><%= number_to_phone(@user.phone_number, options = {}) %></h5>
+        <!-- <h5><%= @user.phone_number %></h5> -->
       <% end %>
       <div class='profile-top--profile-picture'>
         <% if @user.image %>
