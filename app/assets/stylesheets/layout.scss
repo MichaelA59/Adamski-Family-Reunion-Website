@@ -35,27 +35,21 @@ footer {
     max-width: 100%;
     color: $white;
     padding: 50px 15px;
-    .footer-links {
+    .left-footer {
+      list-style: none;
+      margin-top:30px;
+      li {
+        float: left;
+        margin-right: 15px;
+      }
+    }
+    .right-footer {
       list-style: none;
       margin-top:30px;
       li {
         float: right;
         margin-right: 15px;
       }
-    }
-    .nav-logo {
-      font-family: 'Nunito';
-      font-size: 2em;
-      vertical-align: center;
-      background-color: transparent;
-      a {
-        color: #FBA100;
-        text-decoration: none;
-      }
-    }
-    .contact {
-      vertical-align: middle;
-      float: right;
       a {
         color: white;
         text-decoration: none;
@@ -63,6 +57,15 @@ footer {
           color: white;
           text-decoration: none;
         }
+      }
+    }
+    .nav-logo {
+      font-family: 'Nunito';
+      font-size: 2em;
+      background-color: transparent;
+      a {
+        color: #FBA100;
+        text-decoration: none;
       }
     }
   }
