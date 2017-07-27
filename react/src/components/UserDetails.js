@@ -37,7 +37,7 @@ class UserDetails extends React.Component {
         />
         <h1>{username}</h1>
         <h5>{this.props.email}</h5>
-        <a href={`http://localhost:3000/users/${this.props.id}`}><span></span></a>
+        <a href={`http://www.adamskitree.com/users/${this.props.id}`}><span></span></a>
       </div>
     )
   }
