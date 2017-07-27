@@ -14,4 +14,4 @@
 * Run `bundle install`
 * Run `npm install`
 * Run `rails s` in your terminal and `npm start` in another tab from your terminal
-* Go to `www.adamskitree.com`
+* Go to `localhost:3000`
