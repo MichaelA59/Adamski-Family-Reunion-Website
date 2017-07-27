@@ -53,6 +53,18 @@ footer {
         text-decoration: none;
       }
     }
+    .contact {
+      vertical-align: middle;
+      float: right;
+      a {
+        color: white;
+        text-decoration: none;
+        &:hover {
+          color: white;
+          text-decoration: none;
+        }
+      }
+    }
   }
 }
 
