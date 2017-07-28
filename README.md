@@ -2,7 +2,7 @@
 
 ### STATUS - COMPLETE (Tweaks here and there)
 
-### Live Site -- [Adamski Family Reunion 2017](www.adamskitree.com)
+### Live Site -- [Adamski Family Reunion 2017](http://www.adamskitree.com)
 
 * This is a site designed to host images taken from my family's reunion party.
 * It will feature a dual authentication (Devise & OAuth - Facebook/ *Maybe Google*)
