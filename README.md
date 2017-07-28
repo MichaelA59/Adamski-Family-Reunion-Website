@@ -15,9 +15,9 @@
 * Clone
 * Run `bundle install`
 * Run `npm install`
-* If using Atom - Hit CMD+Shift+F and Replace all instances of `www.adamskitree.com` with `localhost:3000`
+* If using Atom - Hit CMD+Shift+F and Replace all instances of `www.adamskitree.com` with `www.adamskitree.com`
 * Run `rails s` in your terminal and `npm start` in another tab from your terminal
-* Go to `localhost:3000`
+* Go to `www.adamskitree.com`
 
 ### ER Diagram
 
